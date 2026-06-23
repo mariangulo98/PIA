@@ -1,0 +1,16 @@
+experimento_id,modelo,hiperparametros,arquitectura,precision_train,recall_train,f1_train,accuracy_train,precision_test,recall_test,f1_test,accuracy_test,diagnostico
+RF_01,RandomForest,"{'n_estimators': 100, 'max_depth': None}",No aplica,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,Buen ajuste - (f1_train - f1_test) < 0.05
+RF_02,RandomForest,"{'n_estimators': 200, 'max_depth': 10}",No aplica,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,Buen ajuste - (f1_train - f1_test) < 0.05
+RF_03,RandomForest,"{'n_estimators': 300, 'min_samples_leaf': 3}",No aplica,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,Buen ajuste - (f1_train - f1_test) < 0.05
+RF_04,RandomForest,"{'n_estimators': 150, 'max_features': 'sqrt'}",No aplica,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,Buen ajuste - (f1_train - f1_test) < 0.05
+RF_05,RandomForest,"{'n_estimators': 250, 'criterion': 'entropy'}",No aplica,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,Buen ajuste - (f1_train - f1_test) < 0.05
+XGB_01,XGBoost,"{'n_estimators': 100, 'max_depth': 3, 'learning_rate': 0.1}",No aplica,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,Buen ajuste - (f1_train - f1_test) < 0.05
+XGB_02,XGBoost,"{'n_estimators': 200, 'max_depth': 5, 'learning_rate': 0.05}",No aplica,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,Buen ajuste - (f1_train - f1_test) < 0.05
+XGB_03,XGBoost,"{'n_estimators': 300, 'subsample': 0.8, 'colsample_bytree': 0.8}",No aplica,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,Buen ajuste - (f1_train - f1_test) < 0.05
+XGB_04,XGBoost,"{'n_estimators': 150, 'reg_lambda': 2.0}",No aplica,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,Buen ajuste - (f1_train - f1_test) < 0.05
+XGB_05,XGBoost,"{'n_estimators': 250, 'max_depth': 4, 'learning_rate': 0.2}",No aplica,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,Buen ajuste - (f1_train - f1_test) < 0.05
+MLP_01,MLP,"{'hidden_layer_sizes': (5,), 'activation': 'relu', 'max_iter': 500}","(5,)",0.9844961240310077,0.9866666666666667,0.9852607709750566,0.9838709677419355,0.9432404540763674,0.9523809523809524,0.944516632016632,0.9444444444444444,Overfitting - (f1_train - f1_test) >= 0.05
+MLP_02,MLP,"{'hidden_layer_sizes': (10,), 'activation': 'tanh', 'max_iter': 500}","(10,)",1.0,1.0,1.0,1.0,0.9791666666666666,0.9841269841269842,0.981117230527144,0.9814814814814815,Buen ajuste - (f1_train - f1_test) < 0.05
+MLP_03,MLP,"{'hidden_layer_sizes': (20, 30), 'activation': 'relu', 'max_iter': 500}","(20, 30)",1.0,1.0,1.0,1.0,0.9848484848484849,0.9777777777777779,0.9807538091419407,0.9814814814814815,Buen ajuste - (f1_train - f1_test) < 0.05
+MLP_04,MLP,"{'hidden_layer_sizes': 50, 'activation': 'relu', 'learning_rate_init': 0.01}",50,1.0,1.0,1.0,1.0,0.9665831244778613,0.9619047619047619,0.963623722244412,0.9629629629629629,Overfitting - (f1_train - f1_test) >= 0.05
+MLP_05,MLP,"{'hidden_layer_sizes': (100,), 'activation': 'relu', 'alpha': 0.001}","(100,)",1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,Buen ajuste - (f1_train - f1_test) < 0.05
